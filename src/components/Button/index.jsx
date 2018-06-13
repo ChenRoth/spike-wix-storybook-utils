@@ -1,5 +1,12 @@
 import React from 'react';
-const Button = ({onClick, children}) => <button onClick={onClick}>{children}</button>
+import PropTypes from 'prop-types'
+const Component = ({onClick, children}) => <button onClick={onClick}>{children}</button>
 
+Component.propTypes = {
+  children: PropTypes.node,
+  onClick: PropTypes.func
+};
 
-export default Button;
+Component.displayName = 'Component';
+
+export default Component;
